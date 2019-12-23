@@ -1,7 +1,7 @@
 # This repository is a work in progress!
 I'm testing the program with paper trades right now trying to improve the machine learning and data limits within the code. I provided some test results at the bottom of this readme in the tests section. I'm hoping to have the neural network live trading out of the box. I'm thinking it could be finished by the end of January 2020. Thanks!
 # marketTrader v1.0
-An all-in-one python script that will: gather and pull data from top gaining stocks, calculate which stock has the highest chance of profit, and using machine learning to buy and sell throughout a typical market day. (WIP)
+A python script that will: gather and pull data from top gaining stocks, calculate which stock has the highest chance of profit, and using machine learning to buy and sell throughout a typical market day. (WIP)
 
 This is not a module. Clone this repository to run it.
 ## Dependencies/Requirements
@@ -19,7 +19,13 @@ The program does use xlwings, which opens Excel files(.xlsx) while they are bein
 ## AlphaVantage
 This repository uses AlphaVantage's API to request data lists on stocks. All you need for this program to work is a free API key from their site, [(https://www.alphavantage.co/)].
 # Use
-The marketTrader.py file is standalone. It does not draw functions from any other python files. I do recommend putting it in a folder because it will produce .xlsx files and .json logs.
+The marketTrader.py file is standalone; it only requires a config.py file with your AlphaVantage API key. I do recommend putting it in a folder because it will produce .xlsx files and .json logs.
+## Setup
+Before use, you need to create a *config.py* file. This is what your *config.py* file should look like:
+```
+API_KEY = '01234567890'
+```
+Just replace the string with your API token(which you can get from [(https://www.alphavantage.co/)]) and put the *config.py* file in the **same directory** as *marketTrader.py*. *Note: Make sure you select the free plan! It is all you need to run this program.*
 ## Startup
 When the program is opened, the menu below is displayed:
 ```
@@ -47,7 +53,7 @@ This option implements machine learning to predict the future price of a stock b
 This option utilizes the entire program and loops specific functions to automate trading on the stock market.
 
 *Note: This program is still in development. Until I finish testing and debugging it, I won't implement the real stock trading. 
-it is currently only using market data to invest and sell based on its predictions.*
+it is currently only using market data to paper trade.*
 # How does marketTrader work?
 This section is specifically detailing the automated trade bot. 
 
