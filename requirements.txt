@@ -1,0 +1,5 @@
+beautifulsoup4==4.8.1
+sklearn==0.0
+XlsxWriter==1.1.8
+xlwings==0.16.4
+yahoo-fin==0.8.4
