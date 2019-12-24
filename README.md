@@ -10,7 +10,10 @@ Install all required modules with
 
 Required modules are:
 - beautifulsoup4==4.8.1
+- holidays==0.9.12
 - sklearn==0.0
+- PyAutoGUI==0.9.38
+- pytz==2018.7
 - XlsxWriter==1.1.8
 - xlwings==0.16.4
 - yahoo-fin==0.8.4
@@ -50,7 +53,7 @@ The stock data is then organized and put into its own Excel file. All Excel file
 ### 3. Train and run neural network prediction:
 This option implements machine learning to predict the future price of a stock based on gathered data. The neural network used is *MLPRegressor* from the module *scikit-learn*. It outputs a list which includes estimated future open and percent change(previous close to predicted open).
 ### 4. Run autonomous trade bot
-This option utilizes the entire program and loops specific functions to automate trading on the stock market.
+This option utilizes the entire program and loops specific functions to automate trading on the stock market. It will even tell you when the market has closed!
 
 *Note: This program is still in development. Until I finish testing and debugging it, I won't implement the real stock trading. 
 it is currently only using market data to paper trade.*

@@ -1,5 +1,8 @@
 beautifulsoup4==4.8.1
+holidays==0.9.12
 sklearn==0.0
+PyAutoGUI==0.9.38
+pytz==2018.7
 XlsxWriter==1.1.8
 xlwings==0.16.4
 yahoo-fin==0.8.4
